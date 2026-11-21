@@ -20,68 +20,83 @@
             --widget-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
         }
 
-        body { font-family: 'Noto Sans Bengali', 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; min-height: 100vh;}
-        .content-nav {  background: var(--dark-gradient); backdrop-filter: blur(10px);  border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
-        .guideline-box {background-color: #ffffff; border-left: 5px solid #3b82f6; border-radius: 14px; box-shadow: var(--card-shadow); }
+        body { font-family: 'Noto Sans Bengali', 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; min-height: 100vh; }
+        .content-nav { background: var(--dark-gradient); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+        .guideline-box { background-color: #ffffff; border-left: 5px solid #3b82f6; border-radius: 14px; box-shadow: var(--card-shadow); }
 
         .type-card {
-            background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px;  padding: 30px;  margin-bottom: 35px; box-shadow: var(--card-shadow); position: relative;
+            background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 30px; margin-bottom: 35px; box-shadow: var(--card-shadow); position: relative;
         }
-        .type-header { font-weight: 800; border-bottom: 2px solid #f1f5f9; padding-bottom: 12px; margin-bottom: 24px;}
+        .type-header { font-weight: 800; border-bottom: 2px solid #f1f5f9; padding-bottom: 12px; margin-bottom: 24px; }
         
-        .theory-container {  border: 1px solid #cbd5e1;  border-radius: 12px; overflow: hidden; background-color: #ffffff;}
-        .theo-1-box { padding: 18px;}
-        .theo-img-box { padding: 2px; display: flex; align-items: center;justify-content: center;  background-color: #f8fafc;}
+        .theory-container { border: 1px solid #cbd5e1; border-radius: 12px; overflow: hidden; background-color: #ffffff; }
+        .theo-1-box { padding: 18px; }
+        .theo-img-box { padding: 8px; display: flex; align-items: center; justify-content: center; background-color: #f8fafc; }
 
-        .theo-2-box { padding: 18px;}
-        .ansContainer{display: flex;flex-direction: row;}
-        .div_1{width: 50%; order: 1;}
-        .div_2{width: 50%; order: 2; border-left: 1px solid black; padding-left: 10px;}
+        .theo-2-box { padding: 18px; }
+        .ansContainer { display: flex; flex-direction: row; }
+        .div_1 { width: 50%; order: 1; }
+        .div_2 { width: 50%; order: 2; border-left: 1px solid black; padding-left: 10px; }
+
+        /* SVG ডায়াগ্রাম রেসপন্সিভ রাখার জন্য */
+        .svg-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: auto;
+        }
+        .svg-wrapper svg {
+            max-width: 100%;
+            height: auto;
+            max-height: 220px;
+        }
 
         @media (max-width: 767.98px) {
-            .theo-img-box { border-left: none; border-top: 1px solid #cbd5e1;}
-            .type-card { padding: 30px 5px;}
-            .theo-1-box {padding: 18px 5px;}
-            .theo-2-box {padding: 18px 5px;}
-            .ansContainer{display: flex;flex-direction: column;}
-            .div_1{width: 100%; order: 2;}
-            .div_2{width: 100%; order: 1; padding: initial; border: none;}
+            .theo-img-box { border-left: none; border-top: 1px solid #cbd5e1; }
+            .type-card { padding: 30px 5px; }
+            .theo-1-box { padding: 18px 5px; }
+            .theo-2-box { padding: 18px 5px; }
+            .ansContainer { display: flex; flex-direction: column; }
+            .div_1 { width: 100%; order: 2; }
+            .div_2 { width: 100%; order: 1; padding: initial; border: none; }
         }
-        .example-box { background-color: #f0fdf4; border-left: 4px solid #22c55e; padding: 10px; border-radius: 4px 14px 14px 4px; }
-        .example-badge { background: #22c55e !important; font-weight: 600;}
 
-        .practice-box { background-color: #eff6ff; border: 1px dashed #bfdbfe; padding: 10px; border-radius: 12px; transition: transform 0.2s;}
-        .practice-box:hover {transform: scale(1.01);}
+        .example-box { background-color: #f0fdf4; border-left: 4px solid #22c55e; padding: 10px; border-radius: 4px 14px 14px 4px; }
+        .example-badge { background: #22c55e !important; font-weight: 600; }
+
+        .practice-box { background-color: #eff6ff; border: 1px dashed #bfdbfe; padding: 10px; border-radius: 12px; transition: transform 0.2s; }
+        .practice-box:hover { transform: scale(1.01); }
         
         .sidebar-widget {
-            background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 18px;  padding: 22px;  margin-bottom: 24px; box-shadow: var(--widget-shadow);
+            background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 18px; padding: 22px; margin-bottom: 24px; box-shadow: var(--widget-shadow);
         }
-        .widget-title { font-size: 16px; font-weight: 700; color: #0f172a;  border-bottom: 2px solid #f1f5f9;  padding-bottom: 10px;  margin-bottom: 16px; display: 
-            flex; align-items: center;  gap: 10px;
+        .widget-title {
+            font-size: 16px; font-weight: 700; color: #0f172a; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
         }
         .sidebar-link {
-            display: block; color: #475569; text-decoration: none; padding: 10px 14px; border-radius: 10px; font-weight: 600;  font-size: 14px;  transition: all 0.25s ease;
+            display: block; color: #475569; text-decoration: none; padding: 10px 14px; border-radius: 10px; font-weight: 600; font-size: 14px; transition: all 0.25s ease;
         }
-        .sidebar-link:hover {  background-color: #f1f5f9; color: #1d4ed8;  padding-left: 18px; }
+        .sidebar-link:hover { background-color: #f1f5f9; color: #1d4ed8; padding-left: 18px; }
         .sidebar-link.active-ch {
             background: var(--primary-gradient); color: #ffffff !important; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
         }
 
         .subject-item {
-            display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px dashed #e2e8f0;   font-size: 14px; font-weight: 600; color: #334155;
+            display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px dashed #e2e8f0; font-size: 14px; font-weight: 600; color: #334155;
         }
-        .subject-icon {  width: 32px; height: 32px;  background-color: #f1f5f9;  color: #3b82f6;  border-radius: 8px;  display: flex;  align-items: 
-            center; justify-content: center; font-size: 14px;
+        .subject-icon {
+            width: 32px; height: 32px; background-color: #f1f5f9; color: #3b82f6; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px;
         }
 
         /* বড় স্ক্রিনে সাইডবার স্টিকি থাকবে */
-        @media (min-width: 992px) {.sticky-sidebar {  position: sticky; top: 100px; }}
+        @media (min-width: 992px) { .sticky-sidebar { position: sticky; top: 100px; } }
     </style>
 </head>
 <body>
 
     <nav class="navbar content-nav py-3 sticky-top shadow-sm">
-        <div class="container d-flex align-items-center justify-content-between">
+        <div class="container d-flex align-items: center justify-content-between">
             <div>
                 <a class="btn btn-sm btn-outline-light fw-bold px-2 px-md-3 py-2 rounded-3 border-opacity-20" href="dashboard.html" aria-label="Dashboard"
                   title="Dashboard"> <i class="bi bi-arrow-left"></i><span class="d-none d-md-inline">Dashboard</span>
@@ -163,9 +178,22 @@
         const className = urlParams.get('class') || 'hsc';
         const chapterId = urlParams.get('ch');        
         let chaptersData = JSON.parse(sessionStorage.getItem("cachedChaptersList")) || [];
+
+        // Check Image URL or SVG code and return right html
+        function renderDiagram(mediaData, altText = "Diagram", imgStyle = "max-height: 220px; width: 100%; object-fit: contain;") {
+            if (!mediaData || typeof mediaData !== "string") return "";
+
+            const trimmedData = mediaData.trim();
+            if (!trimmedData) return "";
+
+            if (trimmedData.toLowerCase().startsWith("<svg") || trimmedData.toLowerCase().includes("<svg")) {
+                return `<div class="svg-wrapper">${trimmedData}</div>`;
+            }
+            return `<img src="${trimmedData}" class="img-fluid rounded" style="${imgStyle}" alt="${altText}">`;
+        }
         
         function renderExampleBlock(exNumTitle, ex1, ex2, exImg) {
-            if (!ex1 && !ex2) return "";
+            if (!ex1 && !ex2 && !exImg) return "";
             let topPart = "";
             
             if (ex1 && exImg) {
@@ -176,26 +204,23 @@
                         </div>
                         <div class="col-12 col-md-5 text-center">
                             <div class="bg-white p-2 border rounded shadow-sm">
-                                <img src="${exImg}" class="img-fluid rounded" style="max-height: 220px; width: 100%; object-fit: contain;" alt="Diagram">
+                                ${renderDiagram(exImg, "Diagram")}
                             </div>
                         </div>
                     </div>
                 `;
             } else if (ex1) {
-                // শুধু ex1
                 topPart = `<div class="text-dark lh-base fw-medium mb-2">${ex1}</div>`;
             } else if (exImg) {
-                // শুধু চিত্র
                 topPart = `
                     <div class="text-center mb-2">
                         <div class="bg-white p-2 border rounded shadow-sm d-inline-block">
-                            <img src="${exImg}" class="img-fluid rounded" style="max-height: 220px; width: 100%; object-fit: contain;" alt="Diagram">
+                            ${renderDiagram(exImg, "Diagram")}
                         </div>
                     </div>
                 `;
             }
 
-            // ex2 পুরো প্রস্থে নিচে বসবে
             let bottomPart = ex2 ? `<div class="text-dark lh-base fw-medium mt-2">${ex2}</div>` : "";
 
             return `
@@ -239,7 +264,7 @@
                                             <div class="text-dark lh-lg fw-semibold">${theo1}</div>
                                         </div>
                                         <div class="col-12 col-md-5 theo-img-box">
-                                            <img src="${theoImg}" class="img-fluid rounded" style="width: 100%; flex: 1 1 auto; object-fit: contain; min-height: 160px;" alt="Theory Image">
+                                            ${renderDiagram(theoImg, "Theory Image", "width: 100%; flex: 1 1 auto; object-fit: contain; min-height: 160px;")}
                                         </div>
                                     </div>
                                     <div class="row g-0">
@@ -257,7 +282,7 @@
                                             <div class="text-dark lh-lg fw-semibold">${theo1}</div>
                                         </div>
                                         <div class="col-12 col-md-5 theo-img-box">
-                                            <img src="${theoImg}" class="img-fluid rounded" style="max-height: 200px; object-fit: contain;" alt="Theory Image">
+                                            ${renderDiagram(theoImg, "Theory Image", "max-height: 200px; object-fit: contain;")}
                                         </div>
                                     </div>
                                 </div>
@@ -281,7 +306,7 @@
 
                         // ২. প্র্যাকটিস প্রশ্নের HTML প্রসেসিং
                         let practiceHTML = "";
-                        if(type.practiceQuestions && type.practiceQuestions.length > 0) {
+                        if (type.practiceQuestions && type.practiceQuestions.length > 0) {
                             type.practiceQuestions.forEach(pq => {
                                 practiceHTML += `
                                     <div class="practice-box mb-3 text-secondary shadow-sm">
@@ -294,7 +319,6 @@
                         }
 
                         // ৩. উদাহরণ ১, ২ ও ৩-এর জন্য কাস্টম লেআউট প্রস্তুতকরণ
-                        // (নতুন ডাটা ফিল্ড: example1_1, example1_2 / পুরাতন ডাটার জন্য ব্যাকওয়ার্ড কম্প্যাটিবিলিটি)
                         const ex1_1 = type.example1_1 || type.example1 || "";
                         const ex1_2 = type.example1_2 || "";
                         const ex1Img = type.example1Img || "";
@@ -356,7 +380,6 @@
                         `;
                     }
                 });
-                
 
                 document.getElementById('loadingTemplate').style.display = 'none';
                 document.getElementById('mainContent').style.display = 'block';
@@ -375,7 +398,6 @@
                 Swal.fire('Error', 'ডাটা লোড করতে সমস্যা হয়েছে!', 'error');
             });
         });
-    
     </script>
 </body>
 </html>
